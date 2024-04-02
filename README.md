@@ -1,5 +1,5 @@
 # -Inventory-Management-System-
-The Inventory Management System APIs provide endpoints to manage suppliers, products, inventoreis and orders. These endpoints allow for CRUD operations on the correspondig resources within the inventory system. These APIs stand to RESTful principles and utilizes JSON format for data exchange.
+The Inventory Management System APIs provide endpoints to manage suppliers, products, inventories and orders. These endpoints allow for CRUD operations on the correspondig resources within the inventory system. These APIs stand to RESTful principles and utilizes JSON format for data exchange.
 ## Entity Relationship Diagram(ERD)
 ![Inventory Management System ERD](https://github.com/AbuEideh/-Inventory-Management-System-/blob/main/IMS_ERD.drawio.png?raw=true)
 ## Resources Collections
