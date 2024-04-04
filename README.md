@@ -22,6 +22,9 @@ You can access the server at `http://localhost:8080`, it will be on port 8080 by
 The APIs documentation is provided by Swagger UI, once you run the server you can access it by opening the browser at:
 >`http://localhost:8080/docs`
 
+### SwaggerHub Link:
+> `https://app.swaggerhub.com/apis/AhmadAbueideh/inventory-management_system_ap_is/1.0.0`
+
 
 ## Entity Relationship Diagram(ERD)
 ![Inventory Management System ERD](https://github.com/AbuEideh/-Inventory-Management-System-/blob/main/IMS_ERD.drawio.png?raw=true)
