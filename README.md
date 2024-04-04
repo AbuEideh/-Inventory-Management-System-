@@ -1,5 +1,28 @@
 # -Inventory-Management-System-
 The Inventory Management System APIs provide endpoints to manage suppliers, products, inventories and orders. These endpoints allow for CRUD operations on the correspondig resources within the inventory system. These APIs stand to RESTful principles and utilizes JSON format for data exchange.
+## Running the IMS API
+You can run the API locally to explore the functionalites and interact with the endpoints.
+### Prerequisites
+Before running the APIs, make sure you have the following prerequisities installed on your system:
+1. Node.js (version 6 or higher)
+2. NPM (Node.js package manager)
+### Installation
+1. Clone this repository to your machine using CMD or gitbash:
+> git clone repository-url
+2. Navigate to the project directory:
+> cd -Inventory-Management-System-
+3. Install dependencies using npm:
+> npm install 
+### Starting the server
+Run the following command to start the server:
+> npm start
+
+You can access the server at `http://localhost:8080`, it will be on port 8080 by default.
+### Viewing documentation
+The APIs documentation is provided by Swagger UI, once you run the server you can access it by opening the browser at:
+>`http://localhost:8080/docs`
+
+
 ## Entity Relationship Diagram(ERD)
 ![Inventory Management System ERD](https://github.com/AbuEideh/-Inventory-Management-System-/blob/main/IMS_ERD.drawio.png?raw=true)
 ## Resources Collections
