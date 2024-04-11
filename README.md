@@ -27,7 +27,7 @@ The APIs documentation is provided by Swagger UI, once you run the server you ca
 
 
 ## Entity Relationship Diagram(ERD)
-![Inventory Management System ERD](https://github.com/AbuEideh/-Inventory-Management-System-/blob/main/IMS_ERD.drawio.png?raw=true)
+![Inventory Management System ERD](https://github.com/AbuEideh/-Inventory-Management-System-/blob/main/IMS_ERD.drawio%20(1).png?raw=true)
 ## Resources Collections
 ### Supplier Collection:
 | HTTP request (method URI) | Operation | Description | HTTP status codes | Request sample | Response sample |
