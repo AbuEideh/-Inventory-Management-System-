@@ -1,0 +1,722 @@
+openapi: 3.1.0
+info:
+  title: Inventory Management System APIs
+  description: "The Inventory Management System APIs provide endpoints to manage suppliers,\
+    \ products, inventories and orders. These endpoints allow for CRUD operations\
+    \ on the correspondig resources within the inventory system. These APIs stand\
+    \ to RESTful principles and utilizes JSON format for data exchange."
+  version: 1.0.0
+servers:
+- url: http://localhost:8080
+tags:
+- name: suppliers
+  description: Everything about suppliers
+- name: products
+  description: Access products
+- name: inventories
+  description: Access inventories
+- name: orders
+  description: Access orders
+paths:
+  /suppliers:
+    get:
+      tags:
+      - suppliers
+      summary: Retrieve all suppliers
+      operationId: suppliersGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Supplier'
+                x-content-type: application/json
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Suppliers
+    put:
+      tags:
+      - suppliers
+      summary: Replace all suppliers with new collection
+      operationId: suppliersPUT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/Supplier'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "405":
+          description: Method Not Allowed
+      x-swagger-router-controller: Suppliers
+    post:
+      tags:
+      - suppliers
+      summary: Create a new supplier
+      operationId: suppliersPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/suppliers_body'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Supplier'
+        "400":
+          description: Bad Request
+        "409":
+          description: Conflict
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Suppliers
+    delete:
+      tags:
+      - suppliers
+      summary: Delete all suppliers
+      operationId: suppliersDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Suppliers
+  /suppliers/{id}:
+    get:
+      tags:
+      - suppliers
+      summary: Retrieve specific supplier
+      operationId: suppliersIdGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Supplier'
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Suppliers
+    delete:
+      tags:
+      - suppliers
+      summary: Delete specific supplier
+      operationId: suppliersIdDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Suppliers
+    patch:
+      tags:
+      - suppliers
+      summary: Update existing supplier
+      operationId: suppliersIdPATCH
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/suppliers_id_body'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Suppliers
+    parameters:
+    - name: id
+      in: path
+      description: ID of the supplier to retrieve
+      required: true
+      style: simple
+      explode: false
+      schema:
+        format: int64
+  /products:
+    get:
+      tags:
+      - products
+      summary: Retrieve all products
+      operationId: productsGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Product'
+                x-content-type: application/json
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Products
+    put:
+      tags:
+      - products
+      summary: Replace all prodcuts with a new collection
+      operationId: productsPUT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/Product'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "405":
+          description: Method Not Allowed
+      x-swagger-router-controller: Products
+    post:
+      tags:
+      - products
+      summary: Create a new product
+      operationId: productsPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "400":
+          description: Bad Request
+        "409":
+          description: Conflict
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Products
+    delete:
+      tags:
+      - products
+      summary: Delete all products
+      operationId: productsDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Products
+  /products/{id}:
+    get:
+      tags:
+      - products
+      summary: Retrieve specific product
+      operationId: productsIdGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Products
+    delete:
+      tags:
+      - products
+      summary: Delete specific product
+      operationId: productsIdDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Products
+    patch:
+      tags:
+      - products
+      summary: Update existing product
+      operationId: productsIdPATCH
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/products_id_body'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Products
+    parameters:
+    - name: id
+      in: path
+      description: ID of the product to retrieve
+      required: true
+      style: simple
+      explode: false
+      schema:
+        format: int64
+  /inventories:
+    get:
+      tags:
+      - inventories
+      summary: Retrieve all inventories
+      operationId: inventoriesGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Inventory'
+                x-content-type: application/json
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Inventories
+    put:
+      tags:
+      - inventories
+      summary: Replace all inventories
+      operationId: inventoriesPUT
+      requestBody:
+        content:
+          applications/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/Inventory'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "405":
+          description: Method Not Allowed
+      x-swagger-router-controller: Inventories
+    post:
+      tags:
+      - inventories
+      summary: Create a new inventory
+      operationId: inventoriesPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+        required: true
+      responses:
+        "201":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+        "400":
+          description: Bad Request
+        "409":
+          description: Conflict
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Inventories
+    delete:
+      tags:
+      - inventories
+      summary: Delete all inventories
+      operationId: inventoriesDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Inventories
+  /inventories/{id}:
+    get:
+      tags:
+      - inventories
+      summary: Retrieve speicific inventory
+      operationId: inventoriesIdGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Inventories
+    delete:
+      tags:
+      - inventories
+      summary: Delete specific inventory
+      operationId: inventoriesIdDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Inventories
+    patch:
+      tags:
+      - inventories
+      summary: Update existing inventory
+      operationId: inventoriesIdPATCH
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/inventories_id_body'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Inventories
+    parameters:
+    - name: id
+      in: path
+      description: ID of the inventory to retrieve
+      required: true
+      style: simple
+      explode: false
+      schema:
+        format: int64
+  /orders:
+    get:
+      tags:
+      - orders
+      summary: Retrieve all orders
+      operationId: ordersGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Order'
+                x-content-type: application/json
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Orders
+    put:
+      tags:
+      - orders
+      summary: Replace all orders
+      operationId: ordersPUT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/Order'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "405":
+          description: Method Not Allowed
+      x-swagger-router-controller: Orders
+    post:
+      tags:
+      - orders
+      summary: Create a new order
+      operationId: ordersPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Order'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        "400":
+          description: Bad Request
+        "409":
+          description: Conflict
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Orders
+    delete:
+      tags:
+      - orders
+      summary: Delete all orders
+      operationId: ordersDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Orders
+  /orders/{id}:
+    get:
+      tags:
+      - orders
+      summary: Retrieve specific order
+      operationId: ordersIdGET
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+      x-swagger-router-controller: Orders
+    delete:
+      tags:
+      - orders
+      summary: Delete specific order
+      operationId: ordersIdDELETE
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+      x-swagger-router-controller: Orders
+    patch:
+      tags:
+      - orders
+      summary: Update existing order
+      operationId: ordersIdPATCH
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/orders_id_body'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+        "422":
+          description: Unprocessable Entity
+      x-swagger-router-controller: Orders
+    parameters:
+    - name: id
+      in: path
+      description: ID of the order to retrieve
+      required: true
+      style: simple
+      explode: false
+      schema:
+        format: int64
+components:
+  schemas:
+    Supplier:
+      properties:
+        id:
+          format: int64
+        name: {}
+        email:
+          format: email
+        address: {}
+        phone: {}
+      example:
+        address: ""
+        phone: ""
+        name: ""
+        id: ""
+        email: ""
+    Product:
+      properties:
+        id:
+          format: int64
+        name: {}
+        description: {}
+        price:
+          format: double
+        quantity_available: {}
+        supplier_id:
+          format: int64
+      example:
+        price: ""
+        name: ""
+        description: ""
+        id: ""
+        supplier_id: ""
+        quantity_available: ""
+    Inventory:
+      properties:
+        id:
+          format: int64
+        product_id:
+          format: int64
+        quantity:
+          format: int64
+        last_restock_date: {}
+        location: {}
+      example:
+        quantity: ""
+        last_restock_date: ""
+        product_id: ""
+        location: ""
+        id: ""
+    Order:
+      properties:
+        id:
+          format: int64
+        supplier_id:
+          format: int64
+        products:
+          items:
+            properties:
+              id:
+                format: int64
+              name: {}
+              description: {}
+              price: {}
+              supplier:
+                properties:
+                  id:
+                    format: int64
+                  name: {}
+                  email: {}
+                  address: {}
+                  phone: {}
+                  quantity_available: {}
+                  quantity: {}
+        quantity: {}
+        order_date: {}
+        delivery_date: {}
+        order_status: {}
+      example:
+        order_date: ""
+        order_status: ""
+        delivery_date: ""
+        quantity: ""
+        id: ""
+        supplier_id: ""
+        products: ""
+    suppliers_body:
+      properties:
+        name: {}
+        email:
+          format: email
+        address: {}
+        phone: {}
+    suppliers_id_body:
+      properties:
+        name: {}
+    products_id_body:
+      properties:
+        name: {}
+    inventories_id_body:
+      properties:
+        quantity: {}
+    orders_id_body:
+      properties:
+        order_status: {}

@@ -1,0 +1,20 @@
+{
+  "name": "inventory-management-system-apis",
+  "version": "1.0.0",
+  "description": "The Inventory Management System APIs provide endpoints to manage suppliers, products, inventories and orders. These endpoints allow for CRUD operations on the correspondig resources within the inventory system. These APIs stand to RESTful principles and utilizes JSON format for data exchange.",
+  "main": "index.js",
+  "scripts": {
+	"prestart": "npm install",
+	"start": "node index.js"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "oas3-tools": "^2.2.3"
+  }
+}
