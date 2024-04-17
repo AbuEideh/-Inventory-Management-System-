@@ -25,6 +25,11 @@ The APIs documentation is provided by Swagger UI, once you run the server you ca
 ### SwaggerHub Link:
 > `https://app.swaggerhub.com/apis/AhmadAbueideh/inventory-management_system_ap_is/1.0.0`
 
+## Testing The Application
+Clone the repository as mentioned above. Make sure you already have Postman downloaded and installed on your machine.
+1. Open Postman and import the API collection provided in the repository into Postman.
+2. Run the springboot application.
+3. Test CRUD operations and check each response from each operation.
 
 ## Entity Relationship Diagram(ERD)
 ![Inventory Management System ERD](https://github.com/AbuEideh/-Inventory-Management-System-/blob/main/IMS_ERD.drawio%20(1).png?raw=true)
