@@ -1,0 +1,4757 @@
+{
+	"info": {
+		"_postman_id": "608076eb-c621-4740-8a36-fffb7eb9f269",
+		"name": "Inventory Management System APIs",
+		"description": "The Inventory Management System APIs provide endpoints to manage suppliers, products, inventories and orders. These endpoints allow for CRUD operations on the correspondig resources within the inventory system. These APIs stand to RESTful principles and utilizes JSON format for data exchange.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20217846"
+	},
+	"item": [
+		{
+			"name": "suppliers",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve specific supplier",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the supplier to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\"\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update existing supplier",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the supplier to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable Entity",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete specific supplier",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the supplier to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Create a new supplier",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Retrieve all suppliers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  }\n]"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Replace all suppliers with new collection",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Method Not Allowed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete all suppliers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve specific product",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the product to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"quantity_available\": \"<integer>\",\n  \"supplier_id\": \"<long>\"\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update existing product",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the product to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable Entity",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete specific product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the product to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the product to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Create a new product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"quantity_available\": \"<integer>\",\n  \"supplier_id\": \"<long>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"quantity_available\": \"<integer>\",\n  \"supplier_id\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"quantity_available\": \"<integer>\",\n  \"supplier_id\": \"<long>\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"quantity_available\": \"<integer>\",\n  \"supplier_id\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"quantity_available\": \"<integer>\",\n  \"supplier_id\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"quantity_available\": \"<integer>\",\n  \"supplier_id\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Retrieve all products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  }\n]"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Replace all prodcuts with a new collection",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Method Not Allowed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"price\": \"<double>\",\n    \"quantity_available\": \"<integer>\",\n    \"supplier_id\": \"<long>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete all products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "inventories",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve speicific inventory",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/inventories/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the inventory to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"product_id\": \"<long>\",\n  \"quantity\": \"<long>\",\n  \"last_restock_date\": \"<string>\",\n  \"location\": \"<string>\"\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update existing inventory",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"quantity\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the inventory to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"quantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"quantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"quantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable Entity",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"quantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete specific inventory",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the inventory to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventories/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventories",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the inventory to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Create a new inventory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<long>\",\n  \"product_id\": \"<long>\",\n  \"quantity\": \"<long>\",\n  \"last_restock_date\": \"<string>\",\n  \"location\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/inventories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inventories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"product_id\": \"<long>\",\n  \"quantity\": \"<long>\",\n  \"last_restock_date\": \"<string>\",\n  \"location\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"product_id\": \"<long>\",\n  \"quantity\": \"<long>\",\n  \"last_restock_date\": \"<string>\",\n  \"location\": \"<string>\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"product_id\": \"<long>\",\n  \"quantity\": \"<long>\",\n  \"last_restock_date\": \"<string>\",\n  \"location\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"product_id\": \"<long>\",\n  \"quantity\": \"<long>\",\n  \"last_restock_date\": \"<string>\",\n  \"location\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"product_id\": \"<long>\",\n  \"quantity\": \"<long>\",\n  \"last_restock_date\": \"<string>\",\n  \"location\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Retrieve all inventories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/inventories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inventories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  }\n]"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Replace all inventories",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "applications/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  }\n]"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/inventories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inventories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Method Not Allowed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"product_id\": \"<long>\",\n    \"quantity\": \"<long>\",\n    \"last_restock_date\": \"<string>\",\n    \"location\": \"<string>\"\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete all inventories",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/inventories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inventories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve specific order",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orders/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the order to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"supplier_id\": \"<long>\",\n  \"products\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    }\n  ],\n  \"quantity\": \"<integer>\",\n  \"order_date\": \"<string>\",\n  \"delivery_date\": \"<string>\",\n  \"order_status\": \"<string>\"\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update existing order",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"order_status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the order to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"order_status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"order_status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"order_status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable Entity",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"order_status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete specific order",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) ID of the order to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID of the order to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Create a new order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<long>\",\n  \"supplier_id\": \"<long>\",\n  \"products\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    }\n  ],\n  \"quantity\": \"<integer>\",\n  \"order_date\": \"<string>\",\n  \"delivery_date\": \"<string>\",\n  \"order_status\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"supplier_id\": \"<long>\",\n  \"products\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    }\n  ],\n  \"quantity\": \"<integer>\",\n  \"order_date\": \"<string>\",\n  \"delivery_date\": \"<string>\",\n  \"order_status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"supplier_id\": \"<long>\",\n  \"products\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    }\n  ],\n  \"quantity\": \"<integer>\",\n  \"order_date\": \"<string>\",\n  \"delivery_date\": \"<string>\",\n  \"order_status\": \"<string>\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"supplier_id\": \"<long>\",\n  \"products\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    }\n  ],\n  \"quantity\": \"<integer>\",\n  \"order_date\": \"<string>\",\n  \"delivery_date\": \"<string>\",\n  \"order_status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"supplier_id\": \"<long>\",\n  \"products\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    }\n  ],\n  \"quantity\": \"<integer>\",\n  \"order_date\": \"<string>\",\n  \"delivery_date\": \"<string>\",\n  \"order_status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"supplier_id\": \"<long>\",\n  \"products\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<number>\",\n      \"supplier\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"quantity_available\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    }\n  ],\n  \"quantity\": \"<integer>\",\n  \"order_date\": \"<string>\",\n  \"delivery_date\": \"<string>\",\n  \"order_status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Retrieve all orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  }\n]"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Replace all orders",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Method Not Allowed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"supplier_id\": \"<long>\",\n    \"products\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<number>\",\n        \"supplier\": {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"address\": \"<string>\",\n          \"phone\": \"<string>\",\n          \"quantity_available\": \"<integer>\",\n          \"quantity\": \"<integer>\"\n        }\n      }\n    ],\n    \"quantity\": \"<integer>\",\n    \"order_date\": \"<string>\",\n    \"delivery_date\": \"<string>\",\n    \"order_status\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete all orders",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
